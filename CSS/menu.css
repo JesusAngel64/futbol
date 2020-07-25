@@ -1,0 +1,224 @@
+/* que se calcule su tamaño desde el borde
+    nada lo sume tamaño a la caja todo que sea adentro de la caja */
+
+    *,*::before, *::after{
+      box-sizing: border-box;
+       }
+
+     /* para resetear */
+     /* :: para seudoelemento seudo clase: */
+     <element::after>
+     *::after,
+     *::before{
+       /* lo hereda del html por el nudo mas apegado */
+       box-sizing: inherit;
+       padding: 0;
+       margin: 0;
+     }
+
+       /*hace referencia al nodo principal de html  */
+           :root{
+             --first-color:#EAFBEA;
+             --first-color-alt:#006DC6;,mkkkkkkkkmjnh
+             --second-color:#00CBFF;
+             --second-color-alt:#00BFF0;
+             --third-color:#FF3C32;
+             --third-color-rgba:rgba(255, 60, 50, .5);
+             --third-color-alt:#FF2419;
+             --accent-color:#FBA905;
+             --accent-color-alt:#F1A000;
+             --dark-color:#282D31;
+             --dark-color-alt:#141618;
+             --border-color:#DFE0E0;
+             --text-color:#53575A;
+             --body-bg:#FAFDFF;
+             --font-main:sans-serif;
+             --font-size:16px;
+             --line-height:1.6;
+             --header-height:7.4rem;
+             /* tamaño de la cabezera y cuanto va a crecer con el contenido */
+             --max-width:1200px;
+             /* background-color: springgreen; */
+           }
+
+body{
+    /* height no se usa cuando hay porcentajes todo depende del papa navegador*/
+ height: 250vh;
+ width: 100%;
+ margin: 0;
+}
+header{
+  width: 100%;
+  height: 12%;
+  margin-top: -3%;
+  /* padding-top: -2%; */
+  position: fixed;
+  z-index: 50;
+  background: #C1AF73;
+}
+
+.anchoColor-menu img{
+  height: 8.3%;
+  width: 4.3%;
+  margin-left: 2%;
+  /* margin-top: -5%; */
+  position: fixed;
+  z-index: 50;
+}
+
+.menu {
+      list-style: none;
+      position: absolute;
+      margin-top: 1.5%;
+      padding-left: 70%;
+      /* que pone asus lados como el inline */
+      display: flex;
+      /* background: #333; */
+    }
+.menu-item{
+    /* para tomar de referencia el se mueve */
+    position: relative;
+}
+.menu-link{
+        text-decoration: none;
+        color:#101A43;
+        /* para convertirlo en bloque */
+        display:block;
+        /* para que se separe Nosotros profesores cursos */
+        padding: .5em 1em;
+      }
+[class*="boton-"]{
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin-top: 2.5%;
+  padding: 6px 12px;
+  font-size: 14px;
+  color:#fff;
+  text-align: center;
+}
+.boton-entrada{
+  background: #A7902F;
+}
+/* para el estado hover no solo tiene los botones sino todos */
+.boton:hover{
+      /* cambiando los colores el dark este en la letra */
+      background-color: var(--accent-color);
+      /* color de letra */
+      color: var(--dark-color);
+      transition:all.5s ease-out;
+    }
+.arequipa{
+  margin-left: 2%;
+  margin-top: 3.6%;
+  color:#101A43;
+  position: fixed;
+  z-index: 50;
+}
+
+
+.container{
+  margin-top: 3%;
+  padding-top: 3%;
+}
+#nextBtn{
+  padding-left: 87%;
+}
+.banner2{
+width:100%;
+height: 360px;
+/* border: 3px solid red; */
+margin-top: 10px;
+margin-bottom: 10%;
+background: #b7bbbb;
+clear: both;
+}
+
+.banner2 img{
+  width: 100%;
+  height: 480px;
+  /*para que tenga animacion las imagenes que aparescan y aparesca la nueva*/
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 400px) and (min-width: 280px)
+{
+  header{
+    height: 30px;
+  }
+
+  .anchoColor-menu img{
+    height: 3.4%;
+    width: 4.3%;
+    margin-left: 2%;
+    margin-top: -1%;
+  }
+
+  .menu {
+        font-size: 4.3px;
+        margin-top: 1%;
+        padding-left: 55%;
+      }
+
+  .menu-link{
+          text-decoration: none;
+          color:#101A43;
+          /* para convertirlo en bloque */
+          display:block;
+          /* para que se separe Nosotros profesores cursos */
+          padding: .5em 1em;
+        }
+  [class*="boton-"]{
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: -3%;
+    padding: 1px 4px;
+    font-size: 12px;
+    color:#fff;
+    text-align: center;
+    height: 10px;
+    margin-left: 8%;
+  }
+  .boton-entrada{
+    background: #A7902F;
+    font-size: 4.3px;
+    padding: 2.4px;
+  }
+  /* para el estado hover no solo tiene los botones sino todos */
+  .boton:hover{
+        /* cambiando los colores el dark este en la letra */
+        background-color: var(--accent-color);
+        /* color de letra */
+        color: var(--dark-color);
+        transition:all.5s ease-out;
+      }
+  .arequipa{
+    margin-left: 2%;
+    margin-top: 3.5%;
+    color:#101A43;
+    position: fixed;
+    z-index: 50;
+    font-size: 4.3px;
+  }
+  #nextBtn{
+  font-size: 4.3px;
+  }
+  #prevBtn{
+    font-size: 4.3px;
+  }
+
+  .banner2{
+  height: 90px;
+  /* border: 3px solid red; */
+  margin-top: 10px;
+  margin-bottom: 10%;
+  background: #b7bbbb;
+  clear: both;
+  }
+
+  .banner2 img{
+    width: 100%;
+    height: 180px;
+    /*para que tenga animacion las imagenes que aparescan y aparesca la nueva*/
+    padding-top: 4px;
+  }
+}

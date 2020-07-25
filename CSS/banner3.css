@@ -1,0 +1,282 @@
+*,*::before, *::after{
+  box-sizing: border-box;
+   }
+
+ /* para resetear */
+ /* :: para seudoelemento seudo clase: */
+ <element::after>
+ *::after,
+ *::before{
+   /* lo hereda del html por el nudo mas apegado */
+   box-sizing: inherit;
+   padding: 0;
+   margin: 0;
+ }
+
+.banner3{
+  position: relative;
+  width: 100%;
+  height: 900px;
+  background: #0D2647;
+  padding-left: 7%;
+}
+.noticias
+{
+  color: #C1AF73;
+  margin-top: 3%;
+  padding-top: 1%;
+  font-family:serif;
+}
+.columnaX3{
+  width: 23.33%;
+  float: left;
+  /*margen interno*/
+  padding: 0;
+  /*para que no se salga del margen de 33.33% ya que sumados 20 y 20 sale 40%*/
+  box-sizing: border-box;
+  margin: 1% 3%;
+  background: #fff;
+}
+
+.columnaX3 img
+{
+/*para que la imagen tambien se acomode a 33.333% en .columnaX3 padding:20 20 y box-sizing*/
+width: 100%;
+}
+
+.columnaX3 h4
+{
+  color:  #0D2647;
+  text-align: center;
+}
+.columnaX3 h5
+{
+  color: #646464;
+  text-align: center;
+  /* para negrita */
+  /* font-weight: bold; */
+}
+.columnaX3 p{
+  color:  #0D2647;
+  text-align: center;
+}
+
+
+/* PARA EL BOTON PROXIMOS PARTIDOS */
+.proxpartidos{
+  width:30%;
+  height: 60px;
+  /* border: 3px solid red; */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 39%;
+  background:  #0D2647;
+  /* clear: both; */
+  text-align: center;
+  font-size: 1.4em;
+  color: #fff;
+  /* font-weight: bold; */
+  /* monospace , cursive*/
+  font-family:sans-serif;
+  /* si no carga la primera fuente ponemos segunda */
+  font-family: verdana,arial,sans-serif;
+  /* para que baje el texto */
+  line-height: 350%;
+  position: absolute;
+}
+.banner4{
+  /* background: blue; */
+  width: 100%;
+  margin-top: 20%;
+  padding: 0;
+}
+.banner4 img{
+  width: 100%;
+  margin: 0;
+}
+
+footer{
+  background: #000;
+  padding: 10px 0 15px 0;
+  margin: auto;
+  overflow: hidden;
+}
+.contenedor-footer{
+  /* para que se ponga en columnas */
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.content-foo{
+  text-align: center;
+}
+.content-foo h4{
+  color: #fff;
+  border-bottom: 3px solid #af20d3;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+.content-foo p{
+  color: #ccc;
+}
+.titulo-final{
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #9e9797;
+}
+
+
+@media screen and (max-width: 400px) and (min-width: 220px)
+{
+  .banner3{
+    height: 2100px;
+    background: #0D2647;
+    margin-top: 15%;
+  }
+  .noticias
+  {
+    color: #C1AF73;
+  }
+  .noticias h2
+  {
+    color: #C1AF73;
+    font-size: 20.8px;
+  }
+  .columnaX3{
+    width: 90.33%;
+    display: inline-block;
+    /*margen interno*/
+    padding: 0;
+    /*para que no se salga del margen de 33.33% ya que sumados 20 y 20 sale 40%*/
+    box-sizing: border-box;
+    margin: 4% 2%;
+    background: #fff;
+  }
+
+  .columnaX3 img
+  {
+  /*para que la imagen tambien se acomode a 33.333% en .columnaX3 padding:20 20 y box-sizing*/
+  width: 100%;
+  }
+
+  .columnaX3 h4
+  {
+    color:  #0D2647;
+    text-align: center;
+    font-size: 10px;
+  }
+  .columnaX3 h5
+  {
+    color: #646464;
+    text-align: center;
+    font-size: 10px;
+    /* para negrita */
+    /* font-weight: bold; */
+  }
+  .columnaX3 p{
+    color:  #0D2647;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .proxpartidos{
+    width:60%;
+    height: 50px;
+    /* border: 3px solid red; */
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 18%;
+    text-align: center;
+    font-size: 1em;
+  }
+  .banner4{
+    /* background: blue; */
+    width: 100%;
+    margin-top: 50%;
+    padding: 0;
+  }
+  .banner4 img{
+    width: 100%;
+    margin: 0;
+  }
+
+  footer{
+    padding: 7px 0 8px 0;
+    height: 5%;
+  }
+  .contenedor-footer{
+    /* para que se ponga en columnas */
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+  .content-foo{
+    text-align: center;
+  }
+  .content-foo h4{
+    font-size: 9px;
+  }
+  .content-foo p{
+    font-size: 8px;
+  }
+  .titulo-final{
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 450px){
+  .banner3{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: #0D2647;
+    padding-left: 8%;
+  }
+  .noticias
+  {
+    color: #C1AF73;
+    margin-top: 3%;
+    padding-top: 1%;
+    font-family:serif;
+  }
+  .columnaX3{
+    width: 21.33%;
+    float: left;
+    /*margen interno*/
+    padding: 0;
+    /*para que no se salga del margen de 33.33% ya que sumados 20 y 20 sale 40%*/
+    box-sizing: border-box;
+    margin: 1% 4.5%;
+    background: #fff;
+  }
+
+  /* PARA EL BOTON PROXIMOS PARTIDOS */
+  .proxpartidos{
+    width:40%;
+    height: 90px;
+    /* border: 3px solid red; */
+    margin-top: 70px;
+    margin-left: 34%;
+    background:  #0D2647;
+    /* clear: both; */
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    /* font-weight: bold; */
+    /* monospace , cursive*/
+    font-family:sans-serif;
+    /* si no carga la primera fuente ponemos segunda */
+    font-family: verdana,arial,sans-serif;
+    /* para que baje el texto */
+    line-height: 350%;
+    position: absolute;
+  }
+}

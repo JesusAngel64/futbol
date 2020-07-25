@@ -1,0 +1,80 @@
+.redessociales{
+  position: fixed;
+  top:200px;
+  /*para este encima de las particulas*/
+  z-index: 100;
+  /*para que este bien pegado en la izquierda y no se desordene*/
+  left:0;
+}
+
+#facebook a{
+  background: #3b5998;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: nome;
+  /*para el ancho de los iconos ya que unos so mas grandes*/
+  width: 55px;
+/*para que en 4 segundos cambie a color negro de despacio a mas rapido*/
+  transition: all .9s ease;
+}
+
+/*cuando el raton se pase se ponga mas grande y cambie de color negro*/
+#facebook a:hover{
+  background: #000;
+  padding: 10px 50px;
+}
+
+#youtube a{
+  background: #bb0000;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: nome;
+  /*para el ancho de los iconos ya que unos so mas grandes*/
+  width: 55px;
+  /*para que en 4 segundos cambie a color negro de despacio a mas rapido*/
+    transition: all .9s ease;
+}
+
+/*cuando el raton se pase se ponga mas grande y cambie de color negro*/
+#youtube a:hover{
+  background: #000;
+  padding: 10px 50px;
+}
+
+
+
+#twitter a{
+  background: #55acee;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: nome;
+  /*para el ancho de los iconos ya que unos so mas grandes*/
+  width: 55px;
+  /*para que en 4 segundos cambie a color negro de despacio a mas rapido*/
+    transition: all .9s ease;
+}
+
+/*cuando el raton se pase se ponga mas grande y cambie de color negro*/
+#twitter a:hover{
+  background: #000;
+  padding: 10px 50px;
+}
+
+
+
+#correo a{
+  background: #e95950;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: nome;
+  /*para el ancho de los iconos ya que unos so mas grandes*/
+  width: 55px;
+  /*para que en 4 segundos cambie a color negro de despacio a mas rapido*/
+    transition: all .9s ease;
+}
+
+/*cuando el raton se pase se ponga mas grande y cambie de color negro*/
+#correo a:hover{
+  background: #000;
+  padding: 10px 50px;
+  }

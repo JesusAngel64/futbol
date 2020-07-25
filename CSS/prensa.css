@@ -1,0 +1,313 @@
+/* que se calcule su tamaño desde el borde
+    nada lo sume tamaño a la caja todo que sea adentro de la caja */
+
+    *,*::before, *::after{
+      box-sizing: border-box;
+       }
+
+     /* para resetear */
+     /* :: para seudoelemento seudo clase: */
+     <element::after>
+     *::after,
+     *::before{
+       /* lo hereda del html por el nudo mas apegado */
+       box-sizing: inherit;
+       padding: 0;
+       margin: 0;
+     }
+
+
+
+body{
+    /* height no se usa cuando hay porcentajes todo depende del papa navegador*/
+ height: 200vh;
+ width: 100%;
+ margin: 0;
+}
+header{
+  width: 100%;
+  height: 12%;
+  margin-top: -5.8%;
+  /* padding-top: -2%; */
+  position: fixed;
+  z-index: 50;
+  background: #C1AF73;
+}
+
+.anchoColor-menu img{
+  height: 8.3%;
+  width: 4.3%;
+  margin-left: 2%;
+  /* margin-top: -5%; */
+  position: fixed;
+  z-index: 50;
+}
+
+.menu {
+      list-style: none;
+      position: absolute;
+      margin-top: 1.5%;
+      padding-left: 70%;
+      /* que pone asus lados como el inline */
+      display: flex;
+      /* background: #333; */
+    }
+.menu-item{
+    /* para tomar de referencia el se mueve */
+    position: relative;
+}
+.menu-link{
+        text-decoration: none;
+        color:#101A43;
+        /* para convertirlo en bloque */
+        display:block;
+        /* para que se separe Nosotros profesores cursos */
+        padding: .5em 1em;
+      }
+[class*="boton-"]{
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin-top: 2.5%;
+  padding: 6px 12px;
+  font-size: 14px;
+  color:#fff;
+  text-align: center;
+}
+.boton-entrada{
+  background: #A7902F;
+}
+/* para el estado hover no solo tiene los botones sino todos */
+.boton:hover{
+      /* cambiando los colores el dark este en la letra */
+      background-color: var(--accent-color);
+      /* color de letra */
+      color: var(--dark-color);
+      transition:all.5s ease-out;
+    }
+.arequipa{
+  margin-left: 2%;
+  margin-top: 3.6%;
+  color:#101A43;
+  position: fixed;
+  z-index: 50;
+}
+.fundacion{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #0D2647;
+  padding-left: 7%;
+}
+.funda
+{
+  color: #C1AF73;
+  margin-top: 6%;
+  padding-top: 8%;
+  font-family:serif;
+}
+/* para la linea de PLANTILLA */
+h2::after{
+      content:'';
+      display:block;
+      height: 3px;
+      background: #C1AF73;
+      /* width: 0; con width no se haces transiciones */
+      /* el 0 es x el y es el grosor */
+      transform: scale(0,1);
+      /*  crece segun su origen*/
+      transform-origin: center left;
+      transition: transform .25s;
+    }
+h2:hover::after{
+      transform: scale(1,1);
+    }
+
+.video{
+  border:3px solid #C1AF73;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.video iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.videopadre{
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 18%;
+  margin-bottom: 8%;
+}
+
+
+.bannner4{
+  /* background: blue; */
+  width: 100%;
+  margin-top: 10%;
+}
+.bannner4 img{
+  width: 100%;
+  margin: 0;
+}
+
+footer{
+  background: #000;
+  padding: 10px 0 15px 0;
+  margin: auto;
+  overflow: hidden;
+}
+.contenedor-footer{
+  /* para que se ponga en columnas */
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.content-foo{
+  text-align: center;
+}
+.content-foo h4{
+  color: #fff;
+  border-bottom: 3px solid #af20d3;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+.content-foo p{
+  color: #ccc;
+}
+.titulo-final{
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #9e9797;
+}
+
+@media screen and (max-width: 400px) and (min-width: 280px)
+{
+  header{
+    height: 2.8%;
+  }
+
+  .anchoColor-menu img{
+    height: 1.6%;
+    width: 4.3%;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+
+  .menu {
+        font-size: 4.3px;
+        margin-top: 1%;
+        padding-left: 55%;
+      }
+
+  .menu-link{
+          text-decoration: none;
+          color:#101A43;
+          /* para convertirlo en bloque */
+          display:block;
+          /* para que se separe Nosotros profesores cursos */
+          padding: .5em 1em;
+        }
+  [class*="boton-"]{
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: -3%;
+    padding: 1px 4px;
+    font-size: 12px;
+    color:#fff;
+    text-align: center;
+    height: 10px;
+    margin-left: 8%;
+  }
+  .boton-entrada{
+    background: #A7902F;
+    font-size: 4.3px;
+    padding: 2.4px;
+  }
+  /* para el estado hover no solo tiene los botones sino todos */
+  .boton:hover{
+        /* cambiando los colores el dark este en la letra */
+        background-color: var(--accent-color);
+        /* color de letra */
+        color: var(--dark-color);
+        transition:all.5s ease-out;
+      }
+  .arequipa{
+    margin-left: 2%;
+    margin-top: 3.5%;
+    color:#101A43;
+    position: fixed;
+    z-index: 50;
+    font-size: 4.3px;
+  }
+  #nextBtn{
+  font-size: 4.3px;
+  }
+  #prevBtn{
+    font-size: 4.3px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 450px)
+{
+  header{
+    height: 8.7%;
+  }
+
+  .anchoColor-menu img{
+    height: 4.3%;
+    width: 4.3%;
+    margin-left: 2%;
+    margin-top: -0.5%;
+  }
+
+  .menu {
+        font-size: 12.9px;
+        margin-top: 1%;
+        padding-left: 64%;
+      }
+
+  [class*="boton-"]{
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: 5%;
+    padding: 10px 19px;
+    font-size: 50px;
+    color:#fff;
+    text-align: center;
+  }
+  .boton-entrada{
+    background: #A7902F;
+    font-size: 10.3px;
+    padding: 5.4px;
+  }
+  /* para el estado hover no solo tiene los botones sino todos */
+  .boton:hover{
+        /* cambiando los colores el dark este en la letra */
+        background-color: var(--accent-color);
+        /* color de letra */
+        color: var(--dark-color);
+        transition:all.5s ease-out;
+      }
+  .arequipa{
+    margin-left: 2%;
+    margin-top: 4.9%;
+    color:#101A43;
+    position: fixed;
+    z-index: 50;
+    font-size: 9.3px;
+  }
+  #nextBtn{
+  font-size: 10.3px;
+  }
+  #prevBtn{
+    font-size: 10.3px;
+  }
+}

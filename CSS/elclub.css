@@ -1,0 +1,607 @@
+/* que se calcule su tamaño desde el borde
+    nada lo sume tamaño a la caja todo que sea adentro de la caja */
+
+    *,*::before, *::after{
+      box-sizing: border-box;
+       }
+
+     /* para resetear */
+     /* :: para seudoelemento seudo clase: */
+     <element::after>
+     *::after,
+     *::before{
+       /* lo hereda del html por el nudo mas apegado */
+       box-sizing: inherit;
+       padding: 0;
+       margin: 0;
+     }
+
+       /*hace referencia al nodo principal de html  */
+           :root{
+             --first-color:#EAFBEA;
+             --first-color-alt:#006DC6;,mkkkkkkkkmjnh
+             --second-color:#00CBFF;
+             --second-color-alt:#00BFF0;
+             --third-color:#FF3C32;
+             --third-color-rgba:rgba(255, 60, 50, .5);
+             --third-color-alt:#FF2419;
+             --accent-color:#FBA905;
+             --accent-color-alt:#F1A000;
+             --dark-color:#282D31;
+             --dark-color-alt:#141618;
+             --border-color:#DFE0E0;
+             --text-color:#53575A;
+             --body-bg:#FAFDFF;
+             --font-main:sans-serif;
+             --font-size:16px;
+             --line-height:1.6;
+             --header-height:7.4rem;
+             /* tamaño de la cabezera y cuanto va a crecer con el contenido */
+             --max-width:1200px;
+             /* background-color: springgreen; */
+           }
+
+body{
+    /* height no se usa cuando hay porcentajes todo depende del papa navegador*/
+ height: 250vh;
+ width: 100%;
+ margin: 0;
+}
+header{
+  width: 100%;
+  height: 12%;
+  margin-top: -5.8%;
+  /* padding-top: -2%; */
+  position: fixed;
+  z-index: 50;
+  background: #C1AF73;
+}
+
+.anchoColor-menu img{
+  height: 8.3%;
+  width: 4.3%;
+  margin-left: 2%;
+  /* margin-top: -5%; */
+  position: fixed;
+  z-index: 50;
+}
+
+.menu {
+      list-style: none;
+      position: absolute;
+      margin-top: 1.5%;
+      padding-left: 70%;
+      /* que pone asus lados como el inline */
+      display: flex;
+      /* background: #333; */
+    }
+.menu-item{
+    /* para tomar de referencia el se mueve */
+    position: relative;
+}
+.menu-link{
+        text-decoration: none;
+        color:#101A43;
+        /* para convertirlo en bloque */
+        display:block;
+        /* para que se separe Nosotros profesores cursos */
+        padding: .5em 1em;
+      }
+[class*="boton-"]{
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin-top: 2.5%;
+  padding: 6px 12px;
+  font-size: 14px;
+  color:#fff;
+  text-align: center;
+}
+.boton-entrada{
+  background: #A7902F;
+}
+/* para el estado hover no solo tiene los botones sino todos */
+.boton:hover{
+      /* cambiando los colores el dark este en la letra */
+      background-color: var(--accent-color);
+      /* color de letra */
+      color: var(--dark-color);
+      transition:all.5s ease-out;
+    }
+.arequipa{
+  margin-left: 2%;
+  margin-top: 3.6%;
+  color:#101A43;
+  position: fixed;
+  z-index: 50;
+}
+
+.fundacion{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #0D2647;
+  padding-left: 7%;
+}
+.funda
+{
+  color: #C1AF73;
+  margin-top: 6%;
+  padding-top: 8%;
+  font-family:serif;
+}
+.titulonuestrahistoria{
+  text-align: center;
+  color: #C1AF73;
+  font-size: 32px;
+  font-weight: bold;
+
+}
+.fondofotos{
+width:100%;
+height: 00px;
+margin-top: 80px;
+padding-top: 40px;
+background: #F1F1F2;
+clear: both;
+}
+
+.imghis{
+  width: 80%;
+ /*para CENTREAR LA IMAGEN*/
+  border: 16px solid black;
+  padding-top: 0px;
+  padding-right: 340px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.textoimgrigth{
+  text-align: right;
+  position: relative;
+  top: -27%;
+  left: -13%;
+  font-size: 16px;
+  color: #3D94D4;
+}
+.primerpartido{
+  background:#0D2647;
+  padding-top:8px;
+  padding-right: 8px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  margin-left: 5%;
+  color: #fff;
+  width: 40%;
+  font-family: sans-serif;
+  font-size: 17px;
+}
+h2::after{
+      content:'';
+      display:block;
+      height: 3px;
+      background: #C1AF73;
+      /* width: 0; con width no se haces transiciones */
+      /* el 0 es x el y es el grosor */
+      transform: scale(0,1);
+      /*  crece segun su origen*/
+      transform-origin: center left;
+      transition: transform .25s;
+    }
+h2:hover::after{
+      transform: scale(1,1);
+    }
+.texto{
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #0D2647;
+  margin-left: 10%;
+  margin-right: 6%;
+  text-align: justify;
+}
+
+
+.bannner4{
+  /* background: blue; */
+  width: 100%;
+  margin-top: 7%;
+  padding: 0;
+}
+.bannner4 img{
+  width: 100%;
+  margin: 0;
+}
+
+
+
+
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  font: normal 14px/1.5 "Helvetica Neue", sans-serif;
+  background: #C8BBB3;
+  color: #fff;
+  margin: 0;
+}
+
+
+/* .section SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.section {
+  background: #F45B69;
+  padding: 50px 0;
+}
+
+.section .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h1 {
+  font-size: 3.1rem;
+}
+
+.section h2 {
+  font-size: 3.3rem;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.timeline ol {
+  font-size: 0;
+  width: 100vw;
+  padding: 250px 0;
+  transition: all 1s;
+}
+
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 3px;
+  background: #fff;
+}
+
+.timeline ol li:last-child {
+  width: 280px;
+}
+
+.timeline ol li:not(:first-child) {
+  margin-left: 14px;
+}
+
+.timeline ol li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #F45B69;
+}
+
+.timeline ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  padding: 15px;
+  font-size: 1.5rem;
+  white-space: normal;
+  color: black;
+  background: white;
+}
+
+.timeline ol li div::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline time {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline .arrows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline .arrows .arrow__prev {
+  margin-right: 20px;
+}
+
+.timeline .disabled {
+  opacity: .5;
+}
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+  .timeline ol,
+  .timeline ol li {
+    width: auto;
+  }
+
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+
+  .timeline ol li div {
+    position: static;
+  }
+
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    height: 25px;
+  }
+
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width:2000px)
+{
+  .fondofotos{
+  width:100%;
+  height: 1300px;
+  margin-top: 80px;
+  padding-top: 40px;
+  background: #F1F1F2;
+  clear: both;
+  }
+}
+
+@media screen and (max-width: 400px) and (min-width: 280px)
+{
+
+
+.anchoColor-menu img{
+  height: 0px;
+}
+
+  .menu {
+        list-style: none;
+        position: absolute;
+        margin-top: 1.5%;
+        padding-left: 70%;
+        /* que pone asus lados como el inline */
+        display: flex;
+        /* background: #333; */
+      }
+  .menu-item{
+      /* para tomar de referencia el se mueve */
+      position: relative;
+  }
+  .menu-link{
+          text-decoration: none;
+          color:#101A43;
+          /* para convertirlo en bloque */
+          display:block;
+          /* para que se separe Nosotros profesores cursos */
+          padding: .5em 1em;
+        }
+  [class*="boton-"]{
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: 2.5%;
+    padding: 6px 12px;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+  }
+  .boton-entrada{
+    background: #A7902F;
+  }
+  /* para el estado hover no solo tiene los botones sino todos */
+  .boton:hover{
+        /* cambiando los colores el dark este en la letra */
+        background-color: var(--accent-color);
+        /* color de letra */
+        color: var(--dark-color);
+        transition:all.5s ease-out;
+      }
+  .arequipa{
+    margin-left: 2%;
+    margin-top: 3.6%;
+    color:#101A43;
+    position: fixed;
+    z-index: 50;
+  }
+
+
+
+  .banner2{
+  height: 90px;
+  /* border: 3px solid red; */
+  margin-top: 10px;
+  margin-bottom: 10%;
+  background: #b7bbbb;
+  clear: both;
+  }
+
+  .banner2 img{
+    width: 100%;
+    height: 100px;
+    /*para que tenga animacion las imagenes que aparescan y aparesca la nueva*/
+    padding-top: 4px;
+  }
+
+  .fundacion{
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background: #0D2647;
+    padding-left: 7%;
+    z-index: 52;
+  }
+  .funda
+  {
+    color: #C1AF73;
+    margin-top: 6%;
+    padding-top: 8%;
+    font-family:serif;
+    z-index: 52;
+  }
+  .titulonuestrahistoria{
+    text-align: center;
+    color: #C1AF73;
+    font-size: 18px;
+    font-weight: bold;
+
+  }
+  .fondofotos{
+  width:100%;
+  height: 800px;
+  margin-top: 60px;
+  padding-top: 40px;
+  background: #F1F1F2;
+  clear: both;
+  }
+
+  .imghis{
+    width: 70%;
+   /*para CENTREAR LA IMAGEN*/
+
+    padding-top: 0px;
+    padding-right: 340px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .textoimgrigth{
+    text-align: right;
+    position: relative;
+    top: -27%;
+    left: -13%;
+    font-size: 16px;
+    color: #3D94D4;
+  }
+  .primerpartido{
+    background:#0D2647;
+    padding-top:8px;
+    padding-right: 8px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    margin-left: 5%;
+    color: #fff;
+    width: 40%;
+    font-family: sans-serif;
+    font-size: 17px;
+  }
+  h2::after{
+        content:'';
+        display:block;
+        height: 3px;
+        background: #C1AF73;
+        /* width: 0; con width no se haces transiciones */
+        /* el 0 es x el y es el grosor */
+        transform: scale(0,1);
+        /*  crece segun su origen*/
+        transform-origin: center left;
+        transition: transform .25s;
+      }
+  h2:hover::after{
+        transform: scale(1,1);
+      }
+  .texto{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #0D2647;
+    margin-left: 10%;
+    margin-right: 6%;
+    text-align: justify;
+  }
+
+}
